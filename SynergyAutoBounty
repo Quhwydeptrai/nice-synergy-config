@@ -1,6 +1,6 @@
 repeat wait()
 until game:IsLoaded()
-local TableChat = {"I Have A Good Script","Config By AfxcaxiRoblox"}
+local TableChat = {""}
 spawn(function()
     while wait() do 
         pcall(function()
