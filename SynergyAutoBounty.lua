@@ -1,4 +1,4 @@
-G.Team = "Marines"
+_G.Team = "Marines"
 _G.FpsBoost = true
 _G.Webhook = ""
 
@@ -9,18 +9,18 @@ getgenv().Region_Hop = {
     ["Enable"] = true, -- true/false
     ["Region"] = "Singapore"
     --[[Singapore, United States, Germany, Japan, France, Australia, etc
-        
-Singapore is the best choice for Asia]]
+        - Singapore is the best choice for Asia
+    ]]
 }
 _G.Setting = {
     ["Start Hunting"] = true, -- Bro wtf don't turn it off
     ["Ken Haki"] = true,
-    ["WhiteScreen"] = true,
+    ["WhiteScreen"] = false,
     ["FruitStuff"] = false, -- Auto Buy and Store Fruits
-    ["Run"] = 4000, -- As the name, you'll run when the health below ...
+    ["Run"] = 4500, -- As the name, you'll run when the health below ...
     ["MaxHealth"] = 5000,
     ["Time&Bounty Counter"] = true,
-    ["Click Delay"] = 0,
+    ["Click Delay"] = 0.2,
     ["SkipPlayerWhenBeingLowHealth"] = false,
     ["Check"] = {
         ["V4 Players"] = false,
@@ -48,19 +48,19 @@ _G.Setting = {
         ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
         ["X"] = {["Enable"] = true, ["HoldTime"] = 0},
         ["C"] = {["Enable"] = true, ["HoldTime"] = 0}
-},
+    },
     ["Fruit"] = {
-        ["Time"] = 4,
-        ["Enable"] = false,
+        ["Time"] = 1,
+        ["Enable"] = true,
         ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
         ["X"] = {["Enable"] = true, ["HoldTime"] = 0},
         ["C"] = {["Enable"] = true, ["HoldTime"] = 0},
-        ["V"] = {["Enable"] = true, ["HoldTime"] = 2},
+        ["V"] = {["Enable"] = true, ["HoldTime"] = 0},
         ["F"] = {["Enable"] = true, ["HoldTime"] = 0}
     },
     ["Sword"] = {
-        ["Time"] = 7,
-        ["Enable"] = false,
+        ["Time"] = 0.15,
+        ["Enable"] = true,
         ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
         ["X"] = {["Enable"] = true, ["HoldTime"] = 0},
     },
@@ -72,6 +72,10 @@ _G.Setting = {
         ["X"] = {["Enable"] = true, ["HoldTime"] = 0},
     }
 }
-
+delay(360,function()
+    if not game.Workspace:FindFirstChild("HiHiHi") then
+      game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+    end
+end)
 repeat wait() until game:IsLoaded()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/clgtmm/AutoBounty/main/main.lua"))()
