@@ -45,7 +45,7 @@ _G.Setting = {
     ["Melee"] = {
         ["Time"] = 1,
         ["Enable"] = true,
-        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0},
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 1},
         ["X"] = {["Enable"] = true, ["HoldTime"] = 0},
         ["C"] = {["Enable"] = true, ["HoldTime"] = 0}
     },
